@@ -1,0 +1,27 @@
+.content {
+  min-height: 600px;
+  padding-bottom: 5rem;
+}
+.col_left {
+  border-right: 2px solid #bab8b8;
+}
+.h_50px {
+  height: 50px;
+  vertical-align: middle;
+}
+.vertical_align_center {
+  vertical-align: middle;
+}
+.btn_home {
+  background-color: #000;
+  color: #fff;
+  font-weight: 600;
+  border: 3px solid #000;
+  outline: none;
+  padding: 8px 15px;
+  margin-top: 1rem;
+}
+.btn_home:hover {
+  background-color: #fff;
+  color: #000;
+}

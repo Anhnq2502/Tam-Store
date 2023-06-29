@@ -1,0 +1,83 @@
+.cart {
+  min-height: 500px;
+}
+.btn_home {
+  background-color: #000;
+  color: #fff;
+  font-weight: 600;
+  border: 3px solid #000;
+  outline: none;
+  padding: 8px 15px;
+}
+.btn_home:hover {
+  background-color: #fff;
+  color: #000;
+}
+.amount_product,
+.increase_amount_btn,
+.decrease_amount_btn {
+  border-top: solid 1px #e1e4e6;
+  border-bottom: solid 1px #e1e4e6;
+  border-radius: 0;
+  margin: 0;
+  height: 28px;
+  float: left;
+  text-align: center;
+  outline: none;
+}
+
+.amount_product {
+  border-right: none;
+  border-left: none;
+  width: 38px;
+  appearance: none;
+}
+
+.increase_amount_btn {
+  width: 28px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: solid 1px #e1e4e6;
+  background: #fff;
+  font-size: 14px;
+  color: #444b52;
+  border-radius: 2px 0 0 2px;
+}
+
+.decrease_amount_btn {
+  width: 28px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: solid 1px #e1e4e6;
+  border-radius: 0;
+  background: #fff;
+  font-size: 14px;
+}
+.increase_amount_btn:hover,
+.decrease_amount_btn:hover {
+  background-color: #c3c4c5;
+}
+.trash_can {
+  font-size: 12px;
+  color: #939ca3;
+  text-align: center;
+  cursor: pointer;
+}
+.btn_payment {
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 5px 15px;
+  background-color: #000;
+  border: 2px solid #000;
+  margin: 30px 0;
+}
+.btn_payment:hover {
+  background-color: #fff;
+  color: #000;
+}

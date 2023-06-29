@@ -1,0 +1,67 @@
+.content {
+  min-height: 600px;
+  margin-bottom: 50px;
+}
+.login {
+  width: 560px;
+  padding: 30px 35px 35px;
+}
+.login_form {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #959898;
+}
+.header_page {
+  text-align: center;
+  font-size: 25px;
+  font-weight: 700;
+  margin: 0 0 20px;
+  line-height: initial;
+  text-transform: uppercase;
+}
+.large_form {
+  margin-bottom: 25px;
+}
+.text_input {
+  width: 100%;
+  height: 55px;
+  padding: 5px 20px;
+  color: #5c5c5c;
+  font-weight: 500;
+  border: 1px solid transparent;
+  background: #ededed;
+  outline: none;
+}
+.text_input:focus {
+  background: #fff;
+  border-color: #ededed;
+}
+.login_btn {
+  color: #fff;
+  display: inline-block;
+  border-radius: 0;
+  padding: 0 30px;
+  height: 45px;
+  line-height: 45px;
+  text-transform: uppercase;
+  font-weight: 600;
+  background: #000;
+  cursor: pointer;
+  border: 1px solid #000;
+  font-size: 14px;
+  outline: none;
+}
+.login_btn:hover {
+  color: #000;
+  background-color: #fff;
+}
+.req_pass {
+  color: #959898;
+  font-weight: 500;
+  display: inline-block;
+}
+.error_mess {
+  margin-top: -15px;
+  color: red;
+  font-size: 14px;
+  font-weight: 500;
+}

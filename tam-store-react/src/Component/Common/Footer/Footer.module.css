@@ -1,0 +1,18 @@
+.footer_top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+.footer_top .title_footer {
+  font-size: 24px;
+  font-weight: bold;
+}
+.text-footer {
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-size: 16px;
+}
