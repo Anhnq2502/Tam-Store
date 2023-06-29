@@ -34,8 +34,7 @@ function Header({ onSearchClick }) {
           <div
             className={`${styles.left_header} + h-100 d-flex align-items-center`}
           >
-            <img src={IMAGES.LOGO} className="h-100" alt="" />
-            <h1 className={styles.name_company}>MFG OFFICIAL ONLINE STORE</h1>
+            <a href="http://localhost:3001/"><h1 className={styles.name_company}>Tạp hoá Tâm</h1></a>
           </div>
           <div className="d-flex justify-content-end align-items-center">
             <div className={styles.search_box}>
@@ -184,32 +183,31 @@ function Header({ onSearchClick }) {
                 </button>
               )}
             </Tooltip>
-            <img src={IMAGES.ICON_VIETNAM} className="ms-5" alt="" />
           </div>
         </div>
       </div>
       <div
         className={`${styles.navbar} + d-flex justify-content-center align-items-center`}
       >
-        <div className="container">
-          <ul
-            className={`${styles.menu_navbar} + d-flex justify-content-between align-items-center list-unstyled w-100 m-0`}
-          >
-            <li>Best seller</li>
-            <li
-              onClick={() => {
-                navigate("/");
-              }}
-            >
-              Sản phẩm
-            </li>
-            <li>Bộ sưu tập</li>
-            <li>Basic line</li>
-            <li>Make your style</li>
-            <li>Outlet style</li>
-            <li>Bad MFG club</li>
-          </ul>
-        </div>
+        {/*<div className="container">*/}
+        {/*  <ul*/}
+        {/*    className={`${styles.menu_navbar} + d-flex justify-content-between align-items-center list-unstyled w-100 m-0`}*/}
+        {/*  >*/}
+        {/*    <li>Best seller</li>*/}
+        {/*    <li*/}
+        {/*      onClick={() => {*/}
+        {/*        navigate("/");*/}
+        {/*      }}*/}
+        {/*    >*/}
+        {/*      Sản phẩm*/}
+        {/*    </li>*/}
+        {/*    <li>Bộ sưu tập</li>*/}
+        {/*    <li>Basic line</li>*/}
+        {/*    <li>Make your style</li>*/}
+        {/*    <li>Outlet style</li>*/}
+        {/*    <li>Bad MFG club</li>*/}
+        {/*  </ul>*/}
+        {/*</div>*/}
       </div>
     </>
   );

@@ -312,20 +312,14 @@ function Order() {
                                   {product.amount}
                                 </span>
                                 <img
-                                  src={product.product.imgProducts[0].pathImg}
-                                  alt=""
-                                  className="w-100"
+                                    src={product.productImg}
+                                    className="w-100"
+                                    alt=""
                                 />
                               </td>
                               <td style={{ verticalAlign: "middle" }}>
                                 <p className="m-0">
                                   {product.product.nameProduct}
-                                </p>
-                                <p
-                                  className="m-0 fw-bold"
-                                  style={{ color: "#898787" }}
-                                >
-                                  {product.size.nameSize}
                                 </p>
                               </td>
                               <td
@@ -350,7 +344,7 @@ function Order() {
                               >
                                 Tạm tính
                               </p>
-                              <p>Phí vận chuyển toàn quốc</p>
+                              <p>Phí vận chuyển</p>
                             </td>
                             <td>
                               <p
@@ -362,7 +356,7 @@ function Order() {
                                   currency: "VND",
                                 })}
                               </p>
-                              <p className="text-end">30.000 VND</p>
+                              <p className="text-end">20.000 VND</p>
                             </td>
                           </tr>
                         </tbody>
@@ -372,7 +366,7 @@ function Order() {
                           Tổng hóa đơn
                         </span>
                         <span className="fw-bold" style={{ fontSize: 20 }}>
-                          {(totalMoney + 30000).toLocaleString("it-IT", {
+                          {(totalMoney + 20000).toLocaleString("it-IT", {
                             style: "currency",
                             currency: "VND",
                           })}

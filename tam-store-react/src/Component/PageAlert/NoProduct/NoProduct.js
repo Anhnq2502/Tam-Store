@@ -1,4 +1,3 @@
-import styles from "./NoProduct.module.css";
 import { FileExcelOutlined, SmileOutlined } from "@ant-design/icons";
 function NoProduct({ title }) {
   return (

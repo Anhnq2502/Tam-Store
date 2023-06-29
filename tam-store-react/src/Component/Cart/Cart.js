@@ -22,7 +22,6 @@ function Cart() {
     for (let i = 0; i < cartCopy.length; i++) {
       if (
         cartCopy[i].product.idProduct === product.product.idProduct &&
-        cartCopy[i].size.id === product.size.id &&
         cartCopy[i].amount > 1
       ) {
         cartCopy[i].amount = cartCopy[i].amount - 1;
@@ -38,7 +37,6 @@ function Cart() {
     for (let i = 0; i < cartCopy.length; i++) {
       if (
         cartCopy[i].product.idProduct === product.product.idProduct &&
-        cartCopy[i].size.id === product.size.id &&
         cartCopy[i].amount < 10
       ) {
         cartCopy[i].amount = cartCopy[i].amount + 1;
@@ -53,8 +51,7 @@ function Cart() {
     let cartCopy = [...cart];
     for (let i = 0; i < cartCopy.length; i++) {
       if (
-        cartCopy[i].product.idProduct === product.product.idProduct &&
-        cartCopy[i].size.id === product.size.id
+        cartCopy[i].product.idProduct === product.product.idProduct
       ) {
         cartCopy.splice(i, 1);
         setCart(cartCopy);
@@ -145,7 +142,6 @@ function Cart() {
                         Sản phẩm
                       </th>
                       <th className="text-center">Giá sản phẩm</th>
-                      <th className="text-center">Size</th>
                       <th className="text-center">Số lượng</th>
                       <th className="text-center">Tổng tiền</th>
                     </tr>
@@ -159,7 +155,7 @@ function Cart() {
                           </th>
                           <td className="col-1">
                             <img
-                              src={product.product.imgProducts[0].pathImg}
+                              // src={product.product.imgProducts[0].pathImg}
                               alt=""
                               className="w-100"
                             />
@@ -178,12 +174,6 @@ function Cart() {
                               style: "currency",
                               currency: "VND",
                             })}
-                          </td>
-                          <td
-                            className="text-center"
-                            style={{ verticalAlign: "middle" }}
-                          >
-                            {product.size.nameSize}
                           </td>
                           <td
                             className="text-center"

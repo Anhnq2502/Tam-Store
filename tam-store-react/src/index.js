@@ -16,16 +16,16 @@ import { restoreData } from "./Redux/Action";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const storedData = getStoredData();
 if (storedData) {
-  store.dispatch(restoreData(storedData));
+    store.dispatch(restoreData(storedData));
 }
 root.render(
-  <Provider store={store}>
-    <PersistGate loading={null} persistor={persistor}>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </PersistGate>
-  </Provider>
+    <Provider store={store}>
+        <PersistGate loading={null} persistor={persistor}>
+            <BrowserRouter>
+                <App />
+            </BrowserRouter>
+        </PersistGate>
+    </Provider>
 );
 
 // If you want to start measuring performance in your app, pass a function

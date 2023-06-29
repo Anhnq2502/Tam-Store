@@ -62,10 +62,9 @@ function Home() {
   return (
     <>
       <Header onSearchClick={handleSearchChange} />
-      <div class={styles.main}>
-        <div class={`${styles.sidebar} + w-15`}>
-          <ul class={`${styles.menu_sidebar} + w-100`}>
-            <li>Best seller</li>
+      <div className={styles.main}>
+        <div className={`${styles.sidebar} + w-15`}>
+          <ul className={`${styles.menu_sidebar} + w-100`}>
             <li
               onClick={() => {
                 handleChangeTypeProduct(0);
@@ -78,40 +77,40 @@ function Home() {
                 handleChangeTypeProduct(1);
               }}
             >
-              Áo thun
+              Snack
             </li>
             <li
               onClick={() => {
                 handleChangeTypeProduct(2);
               }}
             >
-              Áo sơmi
+              Dầu ăn
             </li>
             <li
               onClick={() => {
                 handleChangeTypeProduct(3);
               }}
             >
-              Áo khoác
+              Bia & rượu
             </li>
             <li
               onClick={() => {
                 handleChangeTypeProduct(4);
               }}
             >
-              Quần
+              Nước giải khát
             </li>
             <li
               onClick={() => {
                 handleChangeTypeProduct(5);
               }}
             >
-              Phụ kiện
+              Bánh
             </li>
-            <li>Basic line</li>
+            <li>Kẹo</li>
           </ul>
         </div>
-        <div class="content w-85 ps-2 row mb-5">
+        <div className="content w-85 ps-2 row mb-5" style={{marginLeft:"8%"}}>
           {products && products.content.length === 0 ? (
             <NoProduct
               title={
@@ -125,11 +124,11 @@ function Home() {
             products.content.map((product) => {
               return (
                 <div
-                  class="w-25 p-3 d-flex justify-content-center align-items-center flex-column"
+                  className="w-25 p-3 d-flex justify-content-center align-items-center flex-column"
                   key={product.idProduct}
                 >
                   <img
-                    src={product.imgProducts[0].pathImg}
+                    src={product.productImg}
                     style={{ width: 218, height: 218, objectFit: "contain" }}
                     className={styles.imgProduct}
                     alt=""
@@ -138,16 +137,16 @@ function Home() {
                     }}
                   />
                   <div
-                    class="desc"
+                    className="desc"
                     style={{ cursor: "pointer" }}
                     onClick={() => {
                       navigate("/product/" + product.idProduct);
                     }}
                   >
-                    <p class="text-center text-uppercase fw-bold m-0 mb-2">
+                    <p className="text-center text-uppercase fw-bold m-0 mb-2">
                       {product.nameProduct}
                     </p>
-                    <p class="text-center text-uppercase fw-bold m-0">
+                    <p className="text-center text-uppercase fw-bold m-0">
                       {product.currCost.toLocaleString("it-IT", {
                         style: "currency",
                         currency: "VND",
