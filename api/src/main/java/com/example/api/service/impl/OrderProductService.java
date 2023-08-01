@@ -1,10 +1,14 @@
 package com.example.api.service.impl;
 
+import com.example.api.dto.TopProductDTO;
 import com.example.api.model.Order;
 import com.example.api.model.OrderProduct;
+import com.example.api.model.Product;
 import com.example.api.repository.IOrderProductRepository;
 import com.example.api.service.IOrderProductService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -28,5 +32,20 @@ public class OrderProductService implements IOrderProductService {
             orderProducts.add(orderProductsOfOrder);
         }
         return orderProducts;
+    }
+
+    @Override
+    public void deleteOrdersByOrderId(int id) {
+        orderProductRepository.deleteOrderProductsByOrder_Id(id);
+    }
+
+    @Override
+    public Page<Product> getBestSellerList(Pageable pageable) {
+        return orderProductRepository.getBestSellerList(pageable);
+    }
+
+    @Override
+    public List<TopProductDTO> getTop10ProductSeller(Pageable pageable) {
+        return orderProductRepository.getTop10ProductSeller(pageable);
     }
 }

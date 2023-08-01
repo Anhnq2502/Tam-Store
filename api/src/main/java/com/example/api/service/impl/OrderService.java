@@ -2,6 +2,7 @@ package com.example.api.service.impl;
 
 import com.example.api.dto.OrderDTO;
 import com.example.api.dto.OrderProductDTO;
+import com.example.api.dto.TopCustomerDTO;
 import com.example.api.model.Customer;
 import com.example.api.model.Employee;
 import com.example.api.model.Order;
@@ -43,6 +44,11 @@ public class OrderService implements IOrderService {
     }
 
     @Override
+    public void deleteOrderById(int id) {
+        orderRepository.deleteById(id);
+    }
+
+    @Override
     public Order saveNewOrder(Order order) {
         return orderRepository.save(order);
     }
@@ -79,5 +85,10 @@ public class OrderService implements IOrderService {
     @Override
     public List<Order> findOrdersByEmployee(int id) {
         return orderRepository.findOrdersByEmployee_Id(id);
+    }
+
+    @Override
+    public List<TopCustomerDTO> getTopCustomerBuyer(Pageable pageable) {
+        return orderRepository.getTopCustomerBuyer(pageable);
     }
 }

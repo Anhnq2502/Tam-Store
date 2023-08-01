@@ -33,4 +33,14 @@ public class ProductService implements IProductService {
     public Page<Product> findProductsByTypeProduct(int id, Pageable pageable) {
         return iProductRepository.findProductsByTypeProductId(id, pageable);
     }
+
+    @Override
+    public List<Product> findProduct(String search) {
+        return iProductRepository.findProductByNameProductContaining(search);
+    }
+
+    @Override
+    public void save(Product product) {
+
+    }
 }

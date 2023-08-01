@@ -11,4 +11,6 @@ public interface IProductService {
     Page<Product> findAllByTypeProduct(String search,int typeProduct, Pageable pageable);
     Product findById(int id);
     Page<Product> findProductsByTypeProduct(int id, Pageable pageable);
+    List<Product> findProduct(String search);
+    void save (Product product);
 }

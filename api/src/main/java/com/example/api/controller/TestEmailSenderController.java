@@ -19,7 +19,7 @@ public class TestEmailSenderController {
     private IEmailSenderService emailSenderService;
     @GetMapping("/test-email")
     public ResponseEntity<?> testSendEmail() throws MessagingException {
-        emailSenderService.sendCodeToConfirmEmail("chinhlvde170423@fpt.edu.vn");
+        emailSenderService.sendCodeToConfirmEmail("quocanh25022001@gmail.com");
         return new ResponseEntity<>(HttpStatus.OK);
     }
 }

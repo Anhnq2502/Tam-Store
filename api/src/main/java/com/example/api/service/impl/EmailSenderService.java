@@ -26,7 +26,7 @@ public class EmailSenderService implements IEmailSenderService {
         int numberRandom = rnd.nextInt(900000) + 100000;
         MimeMessage mimeMessage = javaMailSender.createMimeMessage();
         MimeMessageHelper mimeMessageHelper = new MimeMessageHelper(mimeMessage, true);
-        Path imageFilePath = Paths.get("C:\\CodeGym\\Scrum_movies\\logo_bad_hibit.jpg");
+        Path imageFilePath = Paths.get("C:\\Users\\Admin\\Desktop\\logo.png");
         String imageName = imageFilePath.getFileName().toString();
         mimeMessageHelper.setTo(email);
         mimeMessageHelper.setText("<span>Kính gửi khách hàng,</span><br><br>"
@@ -38,11 +38,11 @@ public class EmailSenderService implements IEmailSenderService {
                 + "vì nó được sử dụng để xác minh email này là của bạn."
                 + "<br>"
                 + "Nếu bạn gặp khó khăn trong việc mua hàng online, "
-                + "vui lòng liên hệ với chúng tôi thông qua số điện thoại 0915412406."
+                + "vui lòng liên hệ với chúng tôi thông qua số điện thoại 0918146694."
                 + "<br><br>"
-                + "Chân thành cảm ơn,<br>"
+                + "Xin chân thành cảm ơn,<br>"
                 + "<img src='cid:"+imageName+"' style=\"width: 75px; height: 75px\" alt=\"Logo\"/>"
-                + "<div style=\"color:#183661; font-size:20px; font-weight:bold\">MFG Shop.</div>", true);
+                + "<div style=\"color:#183661; font-size:20px; font-weight:bold\">Tạp hoá Tâm.</div>", true);
         mimeMessageHelper.setSubject("Xác nhận email");
         DataSource imageDataSource = new FileDataSource(imageFilePath.toFile());
         mimeMessageHelper.addInline(imageName, imageDataSource);
