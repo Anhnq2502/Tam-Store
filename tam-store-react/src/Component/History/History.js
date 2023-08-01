@@ -13,6 +13,7 @@ function History() {
   const account = JSON.parse(localStorage.getItem("account"));
   const navigate = useNavigate();
   useEffect(() => {
+    document.title = "Lịch sử mua hàng"
     const getHistoryByUser = async () => {
       const result = await getHistoryOrderByUsername(
         account.username,
@@ -96,8 +97,7 @@ function History() {
                     style={{ fontSize: 60, marginBottom: "1rem" }}
                   />
                   <h3 className="text-center">
-                    Bạn chưa có đơn hàng nào, quay lại trang chủ để ủng hộ các
-                    sản phẩm của chúng yêu nhé.
+                    Bạn chưa có đơn hàng nào
                   </h3>
                   <button
                     className={styles.btn_home}
@@ -109,15 +109,15 @@ function History() {
                   </button>
                 </div>
               ) : (
-                <table class="table">
+                <table class="table table-responsive">
                   <thead>
                     <tr>
-                      <th>STT</th>
-                      <th>Sản phẩm</th>
+                      <th className="text-center">STT</th>
+                      <th className="text-center">Sản phẩm</th>
                       <th className="text-center">Tổng tiền</th>
                       <th className="text-center">Ngày đặt</th>
                       <th className="text-center">Thanh toán</th>
-                      <th className="text-end">Trạng thái đơn hàng</th>
+                      <th className="text-center">Trạng thái đơn hàng</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -133,13 +133,12 @@ function History() {
                             <td className={`${styles.vertical_align_center}`}>
                               {order.map((product) => (
                                 <>
-                                  <p>
+                                  <td className="d-flex justify-content-center">
                                     {product.product.nameProduct +
                                       " - " +
-                                      product.size.nameSize +
                                       " - SL: " +
                                       product.amountProduct}
-                                  </p>
+                                  </td>
                                 </>
                               ))}
                             </td>

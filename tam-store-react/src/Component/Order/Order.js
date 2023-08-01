@@ -38,6 +38,7 @@ function Order() {
   };
   const token = JSON.parse(localStorage.getItem("account")).token;
   useEffect(() => {
+    document.title = "Thanh toán"
     // Handle information user orders clothings
     const account = localStorage.getItem("account");
     if (!account) {
@@ -140,7 +141,7 @@ function Order() {
                   paymentAfterReceive();
                   handleClose();
                   toast.success(
-                    "Đặt hàng thành công, đơn hàng sẽ được giao trong 3-5 ngày."
+                    "Đặt hàng thành công, đơn hàng sẽ được giao trong vài ngày tới."
                   );
                   navigate("/");
                   dispatch(addNewProductToCart([]));
@@ -155,7 +156,7 @@ function Order() {
                     window.location = result.urlForward;
                     handleClose();
                     toast.success(
-                      "Đặt hàng thành công, đơn hàng sẽ được giao trong 3-5 ngày."
+                      "Đặt hàng thành công, đơn hàng sẽ được giao trong vài ngày tới."
                     );
                   }, 3000);
                 };
@@ -169,7 +170,7 @@ function Order() {
                     window.location = result.link;
                     handleClose();
                     toast.success(
-                      "Đặt hàng thành công, đơn hàng sẽ được giao trong 3-5 ngày."
+                      "Đặt hàng thành công, đơn hàng sẽ được giao trong vài ngày tới."
                     );
                   }, 3000);
                 };
@@ -207,7 +208,7 @@ function Order() {
                     </div>
                     <input
                       className={`${styles.field_input} mt-4`}
-                      value={"Quê quán: " + user.address}
+                      value={"Địa chỉ: " + user.address}
                       placeholder="Địa chỉ"
                       disabled
                     />
@@ -280,7 +281,7 @@ function Order() {
                       onChange={getAllAddressToTakeOrder}
                     />
                     <p className="pt-2 m-0">
-                      <span className="fw-bold">Địa chỉ giao:</span>{" "}
+                      <span className="fw-bold">Địa chỉ giao hàng:</span>{" "}
                       {addressTakeOrder}
                     </p>
                     <Field

@@ -12,6 +12,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { getStoredData, persistor, store } from "./store";
 import { PersistGate } from "redux-persist/integration/react";
 import { restoreData } from "./Redux/Action";
+import {ToastContainer} from "react-toastify";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const storedData = getStoredData();
@@ -23,6 +24,7 @@ root.render(
         <PersistGate loading={null} persistor={persistor}>
             <BrowserRouter>
                 <App />
+                <ToastContainer/>
             </BrowserRouter>
         </PersistGate>
     </Provider>
